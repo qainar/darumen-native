@@ -1,0 +1,28 @@
+*,
+*::after,
+*::before{
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+.wrapper{
+  margin: 0 80px;
+}
+
+*:focus{
+    outline: none;
+}
+@media screen and (max-width: 1024px) {
+    .wrapper{
+      margin: 0 40px;
+    }
+}
+@media screen and (min-width: 360px) and (max-width: 375px){
+    .wrapper{
+      margin: 0 20px;
+    }
+}

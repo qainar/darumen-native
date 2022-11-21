@@ -1,0 +1,374 @@
+* {
+    font-family: Montserrat;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+body {
+    background: #2E2E2E;
+    margin: 0;
+}
+
+header {
+    margin-top: 62px;
+    text-align: center;
+}
+
+header img {
+    height: 25px;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    padding-bottom: 60px;
+}
+
+article {
+    display: flex;
+    margin-top: 100px;
+    flex-direction: column;
+    align-items: center;
+}
+
+section article span {
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 44px;
+    color: #FFFFFF;
+    text-align: center;
+}
+
+.go {
+    background: #F7C73F;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 99px;
+    font-weight: 600;
+    font-size: 24px;
+    padding: 26px 34px;
+    border: none;
+    margin-top: 39px;
+}
+
+.back {
+    background: rgba(255, 255, 255, 0.4);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 99px;
+    display: flex;
+    align-items: center;
+    padding: 11px 22px;
+    margin-top: 23px;
+}
+
+.fa-arrow-left {
+    font-size: 13px;
+    margin-right: 5px;
+}
+
+.back .back-btn {
+    border: none;
+    background: none;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+section p {
+    color: white;
+    font-size: 18px;
+    width: 647px;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 18px;
+}
+
+section p a {
+    color: white;
+}
+
+input[type="text"] {
+    border: 1px solid #FFFFFF;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    width: 700px;
+    height: 80px;
+    background: none;
+    margin-top: 39px;
+    text-align: center;
+    color: #fff;
+    font-size: 40px;
+}
+
+input[type="number"] {
+    border: 1px solid #FFFFFF;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    width: 700px;
+    height: 80px;
+    background: none;
+    margin-top: 39px;
+    text-align: center;
+    color: #fff;
+    font-size: 40px;
+}
+
+
+
+.three div {
+    display: flex;
+    gap: 80px;
+    justify-content: center;
+    align-items: center;
+}
+
+.three span {
+    margin-bottom: 10px;
+}
+
+.three div .gender {
+    border: 1px solid #FFFFFF;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    width: 160px;
+    height: 160px;
+}
+
+.three div .gender i {
+    font-size: 80px;
+}
+
+.gender span {
+    display: none;
+}
+
+.three div .genderHover {
+    border: 1px solid red;
+}
+
+
+.form_radio {
+    margin-bottom: 10px;
+}
+
+.form_radio input[type=radio] {
+    display: none;
+}
+
+.form_radio label {
+    display: inline-block;
+    cursor: pointer;
+    position: relative;
+    padding-left: 25px;
+    margin-right: 0;
+    line-height: 18px;
+    user-select: none;
+    font-size: 30px;
+    margin-top: 20px;
+    color: white;
+}
+
+.form_radio label:before {
+    content: "";
+    display: inline-block;
+    width: 17px;
+    height: 18px;
+    position: absolute;
+    left: 0;
+    bottom: 1px;
+    background: url(https://snipp.ru/img/radio-1.png) 0 0 no-repeat;
+}
+
+.form_radio input[type=radio]:checked+label:before {
+    background: url(https://snipp.ru/img/radio-2.png) 0 0 no-repeat;
+}
+
+.form_radio label:hover:before {
+    filter: brightness(120%);
+}
+
+
+.container{
+    position: absolute;
+    bottom: 0px;
+
+}
+.progress-container{
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    margin-bottom: 30px;
+    max-width: 100%;
+    width: 100vw;
+
+}
+.progress-container::before{
+    content: '';
+    background-color: #efefef;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    height: 4px;
+    width: 100%;
+    z-index: -1;
+    
+}
+.progress{
+    background-color: #F7C73F;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    height: 4px;
+    width: 00%;
+    z-index: -1;
+    transition: 0.4s ease;
+}
+/* .circle{
+    background-color: #fff;
+    color: #999;
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #efefef;
+    transition: 0.4s ease;
+} */
+.circle.active{
+    border-color: #3498db;
+}
+
+
+@media screen and (min-width: 425px) and (max-width: 768px) {
+    input[type="text"]{
+        width: 400px;
+    }
+    input[type="number"]{
+        width: 400px;
+    }
+    section p{
+        width: 400px;
+    }
+    
+}
+
+
+@media screen and (min-width: 375px) and (max-width:425px) {
+    section p {
+        width: 200px;
+        font-size: 12px;
+    }
+
+    input[type="text"] {
+        width: 200px;
+        height: 40px;
+        font-size: 20px;
+    }
+    input[type="number"] {
+        width: 200px;
+        height: 40px;
+        font-size: 20px;
+    }
+
+    section article span {
+        font-size: 20px;
+    }
+    .go{
+        padding: 13px 17px;
+        font-size: 12px;
+    }
+    .back{
+        padding: 6px 7px;
+    }
+    .back .back-btn{
+        font-size: 10px;
+    }
+    .fa-arrow-left{
+        font-size: 10px;
+    }
+
+    .form_radio label{
+        font-size: 15px;
+        margin-top: 10px;
+    }
+    header span{
+        font-size: 24px;
+    }
+    section{
+        margin-top: 70px;
+    }
+
+}
+
+@media screen and (min-width: 320px) and (max-width:375px) {
+    section p {
+        width: 150px;
+        font-size: 10px;
+    }
+
+    input[type="text"] {
+        width: 200px;
+        height: 40px;
+        font-size: 20px;
+    }
+    input[type="number"] {
+        width: 200px;
+        height: 40px;
+        font-size: 20px;
+    }
+
+
+    section article span {
+        font-size: 18px;
+    }
+
+    .go{
+        padding: 10px 13px;
+        font-size: 10px;
+    }
+    .back{
+        padding: 5px 6px;
+    }
+    .back .back-btn{
+        font-size: 8px;
+    }
+    .fa-arrow-left{
+        font-size: 10px;
+    }
+
+    .form_radio label{
+        font-size: 12px;
+        margin-top: 8px;
+    }
+    header span{
+        font-size: 24px;
+    }
+    section{
+        margin-top: 48px;
+    }
+
+}
+
+@media screen and (max-width:320px) {
+    section p {
+        width: 100px;
+    }
+
+    input[type="text"] {
+        width: 150px;
+    }
+    input[type="number"] {
+        width: 150px;
+    }
+
+    .go {
+        font-size: 12px;
+    }
+
+    section article span {
+        font-size: 20px;
+    }
+}
